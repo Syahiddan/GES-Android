@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="2dp"
+    android:weightSum="3">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/simple_bubble_btn"
+        android:minHeight="30dp"
+        android:text="Name"
+        android:typeface="serif"
+        android:onClick="sortingPlace"
+         />
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/simple_bubble_btn"
+        android:minHeight="30dp"
+        android:text="Guardian"
+        android:typeface="serif"
+        android:onClick="sortingPlace"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/simple_bubble_btn"
+        android:minHeight="30dp"
+        android:text="Action"
+        android:typeface="serif"
+        />
+</LinearLayout>

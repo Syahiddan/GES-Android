@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <RelativeLayout
+
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+    <RelativeLayout
+        android:background="@drawable/login_second_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:padding="15dp">
+        <TextView
+            android:background="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_sys_logo"
+            android:layout_alignRight="@+id/img_sys_logo"
+            android:layout_alignLeft="@+id/img_sys_logo"
+            android:layout_alignBottom="@+id/img_sys_logo"
+            />
+        <ImageView
+            android:id="@+id/img_sys_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:minHeight="100dp"
+            android:minWidth="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/logo_ges"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/img_sys_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:typeface="normal"
+                android:textColor="@android:color/black"
+                android:id="@+id/tv_username"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:visibility="visible"/>
+
+            <EditText
+                android:padding="5dp"
+                android:minHeight="40dp"
+                android:background="@drawable/simple_bubble_btn"
+                android:typeface="normal"
+                android:textColor="@android:color/black"
+                android:id="@+id/et_username"
+                android:layout_below="@+id/tv_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:inputType="text"/>
+            <TextView
+                android:typeface="normal"
+                android:textColor="@android:color/black"
+                android:id="@+id/tv_password"
+                android:layout_below="@+id/et_username"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:visibility="visible"/>
+
+            <EditText
+                android:padding="5dp"
+                android:minHeight="40dp"
+                android:background="@drawable/simple_bubble_btn"
+                android:typeface="normal"
+                android:textColor="@android:color/black"
+                android:id="@+id/et_password"
+                android:layout_below="@+id/tv_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"/>
+            <Button
+                android:backgroundTint="@android:color/black"
+                android:typeface="normal"
+                android:textColor="@android:color/black"
+                android:id="@+id/unhide"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignRight="@+id/et_password"
+                android:layout_alignBottom="@+id/et_password"
+                android:background="@drawable/icon_hide"
+                android:onClick="changePasswordState"/>
+            <Button
+                android:id="@+id/btn_login"
+                android:background="@drawable/custom_btn_success"
+                android:layout_alignRight="@+id/et_password"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="LOGIN"
+                android:layout_below="@+id/et_password"
+                android:onClick="loginState"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

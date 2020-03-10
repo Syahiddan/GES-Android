@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <bitmap android:src="@drawable/leaf_btn_clicked" />
+    </item>
+    <item android:state_pressed="true">
+        <bitmap android:src="@drawable/leaf_btn_click"/>
+    </item>
+    <item android:state_enabled="false">
+        <bitmap android:src="@drawable/leaf_btn_disabled"/>
+    </item>
+</selector>

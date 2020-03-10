@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:focusableInTouchMode="false"
+    android:focusable="false"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/display_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/schedule_hour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:text="Time"
+            android:inputType="time"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/schedule_btn_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:textSize="8dp"
+            android:text="edit"
+            android:drawableTop="@drawable/icon_edit"
+            />
+        <Button
+            android:id="@+id/schedule_btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:drawableTop="@drawable/icon_delete"
+            android:textSize="8dp"
+            android:text="delete"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/status_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/edit_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="90">
+        <Spinner
+            android:minHeight="10dp"
+            android:id="@+id/schedule_edit_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="45"
+            android:entries="@array/day_spinner"/>
+        <EditText
+            android:id="@+id/schedule_edit_hour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:text="Time"
+            android:inputType="time"
+            android:gravity="center"/>
+
+        <Button
+            android:background="@mipmap/bg_submit"
+            android:id="@+id/schedule_btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="20"/>
+
+    </LinearLayout>
+
+</LinearLayout>

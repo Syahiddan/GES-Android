@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="50"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/worker_edit_frame">
+    <LinearLayout
+        android:id="@+id/loading_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/loading_space"
+        android:id="@+id/row_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:orientation="horizontal"
+        android:weightSum="50">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="14"
+            android:orientation="vertical"
+            android:weightSum="5">
+            <ImageView
+                android:id="@+id/worker_img"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/flower_btn" />
+
+            <Button
+                android:id="@+id/upload_img_btn"
+                style="@style/button_worker_edit"
+                android:text="image"/>
+            <Button
+                android:id="@+id/add_btn"
+                style="@style/button_worker_edit"
+                android:text="add"/>
+            <Button
+                android:id="@+id/cancel_btn"
+                style="@style/button_worker_edit"
+                android:text="cancel"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginLeft="3dp"
+                    style="@style/worker_text_detail"
+                    android:id="@+id/error_message"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"/>
+            </ScrollView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="34"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="100">
+
+
+                <TextView
+                    android:id="@+id/worker_label_id"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:gravity="right"
+                    android:text="ID         :"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <EditText
+                    android:id="@+id/worker_id_edit"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <TextView
+
+                    android:id="@+id/worker_label_phone"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:text="Phone :"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <EditText
+                    android:id="@+id/worker_phone_edit"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:inputType="number"
+                    android:hint="phone number"
+                    android:maxLength="12"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/worker_label_fname"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:text="First Name:"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <EditText
+                    android:id="@+id/worker_fname_edit"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:paddingHorizontal="5dp"
+                    android:textSize="9dp"
+                    android:hint="first name"
+                    android:textColor="@color/colorPrimaryDark" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="100"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/worker_label_mname"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:text="Middle Name:"
+                    android:textSize="9.5dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <EditText
+                    android:id="@+id/worker_mname_edit"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:paddingHorizontal="5dp"
+                    android:textSize="9dp"
+                    android:hint="middle name"
+                    android:textColor="@color/colorPrimaryDark" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="100"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/worker_label_lname"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:text="Last Name:"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <EditText
+                    android:id="@+id/worker_lname_edit"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:paddingHorizontal="5dp"
+                    android:textSize="9dp"
+                    android:hint="last name"
+                    android:textColor="@color/colorPrimaryDark" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:weightSum="100">
+
+                <TextView
+
+                    android:id="@+id/worker_label_email"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:gravity="right"
+                    android:text="E-mail  :"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <EditText
+                    android:id="@+id/worker_email_edit"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80"
+                    android:paddingHorizontal="5dp"
+                    android:hint="this e-mail space"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/worker_label_address"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:text="Address  :"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="8.5dp" />
+
+                <EditText
+                    android:id="@+id/worker_address_edit"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="75"
+                    android:paddingHorizontal="5dp"
+                    android:hint="this address space"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="8.5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/worker_label_postcode"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:text="Postcode:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="8.5dp" />
+
+                <EditText
+                    android:id="@+id/worker_postcode_edit"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:gravity="center"
+                    android:hint="77000"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="8.5dp"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:id="@+id/worker_label_state"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:gravity="right"
+                    android:text="State:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="8.5dp" />
+
+                <EditText
+                    android:id="@+id/worker_state_edit"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="45"
+                    android:gravity="center"
+                    android:hint="Melaka"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="8.5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/worker_label_country"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:text="Country  :"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="8.5dp" />
+
+                <EditText
+                    android:id="@+id/worker_country_edit"
+                    style="@style/worker_text_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="75"
+                    android:gravity="center"
+                    android:hint="Malaysia"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="8.5dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <!--<Button-->
+    <!--android:layout_width="20dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="X" />-->
+
+
+</RelativeLayout>

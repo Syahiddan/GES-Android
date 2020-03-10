@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:id="@+id/tool_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:background="@color/cream_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:hint="Plant Name"
+            android:id="@+id/input_plant_name"
+            android:layout_margin="2dp"
+            android:padding="5dp"
+            android:layout_weight="60"
+            android:layout_width="0dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_input_text"/>
+        <Button
+            android:layout_gravity="center"
+            android:layout_weight="20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:textSize="10dp"
+            android:minHeight="30dp"
+            android:text="Search"
+            android:drawableLeft="@drawable/icon_search"
+            android:background="@drawable/simple_bubble_btn"
+            android:onClick="filterPlantSearch"/>
+
+        <Button
+            android:enabled="false"
+            android:drawableLeft="@drawable/icon_filter"
+            android:minHeight="30dp"
+            android:text="filter"
+            android:background="@drawable/simple_bubble_btn"
+            android:layout_weight="20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="open_filter_layout"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/tool_footer"
+        android:layout_below="@+id/tool_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_margin="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Guardian Assign"
+            android:layout_weight="40"
+            android:gravity="center"
+            android:typeface="serif"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:minHeight="30dp"
+            android:id="@+id/filter_all_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="ALL"
+            android:background="@drawable/simple_bubble_btn"
+            android:onClick="filterPlacesBtn"
+            android:typeface="serif"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:minHeight="30dp"
+            android:id="@+id/filter_have_guardian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="EXIST"
+            android:background="@drawable/simple_bubble_btn"
+            android:onClick="filterPlacesBtn"
+            android:typeface="serif"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:minHeight="30dp"
+            android:id="@+id/filter_not_have_guardian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="NOT EXIST"
+            android:background="@drawable/simple_bubble_btn"
+            android:onClick="filterPlacesBtn"
+            android:typeface="serif"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <!--<include layout="@layout/place_arraylist"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/place_table_header"/>-->
+    <ListView
+        android:layout_below="@+id/tool_footer"
+        android:id="@+id/list_device"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:drawableLeft="@drawable/add_icon"
+            android:text="add"
+            style="@style/black_text"
+            android:layout_margin="20dp"
+            android:onClick="addPlantBtn"/>
+    </RelativeLayout>
+
+</RelativeLayout>

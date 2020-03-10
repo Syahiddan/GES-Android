@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="90">
+
+    <Spinner
+        android:id="@+id/schedule_day_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="45"
+        android:entries="@array/day_spinner"
+        android:minHeight="10dp" />
+
+    <EditText
+        android:id="@+id/schedule_hour_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="35"
+        android:gravity="center"
+        android:inputType="time" />
+
+    <Button
+        android:id="@+id/schedule_btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="10"
+        android:drawableRight="@drawable/icon_add" />
+
+</LinearLayout>

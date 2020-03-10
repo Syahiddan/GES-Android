@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminWorker">
+
+    <TextView
+        android:id="@+id/table_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Worker"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/worker_table_list"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="3dp"
+        android:onClick="add_new_worker"
+        android:text="add" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_btn"
+        android:id="@+id/big_container">
+        <com.github.aakira.expandablelayout.ExpandableLinearLayout
+            android:id="@+id/worker_table_list_add_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            app:ael_duration="500"
+            app:ael_expanded="false"
+            app:ael_interpolator="bounce"
+            app:ael_orientation="horizontal"
+            android:background="@drawable/worker_edit_frame">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+        </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+    </ScrollView>
+
+
+    <ListView
+
+        android:id="@+id/worker_table_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/big_container"
+        android:padding="10dp">
+
+    </ListView>
+
+
+
+
+</RelativeLayout>

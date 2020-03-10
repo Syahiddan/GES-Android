@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/comp_id"/>
+    <TextView
+        android:id="@+id/comp_name"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Device" />
+
+    <co.ceryle.radiorealbutton.RadioRealButtonGroup
+        android:id="@+id/group_button"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        app:rrbg_animateDrawables_enter="overshoot"
+        app:rrbg_animateTexts_enter="overshoot"
+        app:rrbg_dividerColor="@android:color/black"
+        app:rrbg_dividerSize="1dp"
+        app:rrbg_radius="5dp"
+        app:rrbg_selectorColor="@android:color/holo_red_light"
+        app:rrbg_selectorFullSize="true">
+
+        <co.ceryle.radiorealbutton.RadioRealButton
+            app:rrb_text="ON"
+            app:rrb_textSize="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <co.ceryle.radiorealbutton.RadioRealButton
+            app:rrb_text="OFF"
+            app:rrb_textSize="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rrb_selectorColor="@color/red_tomato"/>
+
+    </co.ceryle.radiorealbutton.RadioRealButtonGroup>
+    <Button
+        android:visibility="gone"
+        android:id="@+id/comp_state"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:text="text"
+        android:textSize="8dp"
+        />
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:id="@+id/tool_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:background="@color/cream_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+
+            android:hint="Device Name"
+            android:id="@+id/input_device_name"
+            android:layout_margin="2dp"
+            android:padding="5dp"
+            android:layout_weight="60"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_input_text"/>
+        <Button
+            android:layout_gravity="center"
+            android:layout_weight="20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:textSize="10dp"
+            android:minHeight="30dp"
+            android:text="Search"
+            android:drawableLeft="@drawable/icon_search"
+            android:background="@drawable/simple_bubble_btn"
+            android:onClick="filterDevice"/>
+
+        <Button
+            android:drawableLeft="@drawable/icon_filter"
+            android:minHeight="30dp"
+            android:text="filter"
+            android:background="@drawable/simple_bubble_btn"
+            android:layout_weight="20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="open_filter_layout"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/tool_footer"
+        android:layout_below="@+id/tool_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_margin="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:layout_weight="40"
+            android:gravity="center"/>
+        <TextView
+            android:minHeight="30dp"
+            android:id="@+id/filter_all_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="ALL"
+            android:background="@drawable/simple_bubble_btn"/>
+        <TextView
+            android:minHeight="30dp"
+            android:id="@+id/filter_online_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="ONLINE"
+            android:background="@drawable/simple_bubble_btn"/>
+        <TextView
+            android:minHeight="30dp"
+            android:id="@+id/filter_offline_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="OFFLINE"
+            android:background="@drawable/simple_bubble_btn"/>
+    </LinearLayout>
+    <!--<ScrollView-->
+        <!--android:layout_below="@+id/tool_header"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent">-->
+
+    <!--</ScrollView>-->
+    <ListView
+        android:visibility="gone"
+        android:layout_below="@+id/tool_footer"
+        android:id="@+id/list_device"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/pb_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_header"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal">
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Fetching Data..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

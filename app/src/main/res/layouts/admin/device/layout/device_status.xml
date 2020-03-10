@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="100">
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_weight="40"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Device Name"
+        android:gravity="center"
+        android:textSize="10dp"
+        android:typeface="normal"/>
+    <TextView
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text=":"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:textColor="@android:color/black"
+        android:id="@+id/btn_device_status"
+        android:textSize="15dp"
+        android:minHeight="30dp"
+        android:typeface="normal"
+        android:layout_weight="58"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="btn_status"
+        android:background="@drawable/simple_bubble_btn"/>
+</LinearLayout>

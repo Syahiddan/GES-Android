@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="@color/search_bar"
+                android:centerColor="@color/search_bar"
+                android:endColor="@color/search_bar"/>
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="@android:color/holo_purple"
+                android:centerColor="@android:color/holo_purple"
+                android:endColor="@android:color/holo_purple"/>
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+</selector>

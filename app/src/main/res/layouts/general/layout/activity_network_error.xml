@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical">
+    <TextView
+        android:textSize="20dp"
+        android:typeface="normal"
+        android:textColor="@android:color/black"
+        android:id="@+id/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Connect to Server"
+        />
+    <Button
+        android:id="@+id/refresh_btn"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/simple_bubble_btn"
+        android:layout_alignLeft="@+id/error_message"
+        android:layout_alignRight="@+id/error_message"
+        android:layout_below="@+id/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="try again"/>
+
+    <RelativeLayout
+        android:id="@+id/img_relative_layout"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/refresh_btn"
+        android:layout_alignRight="@+id/refresh_btn"
+        android:layout_alignLeft="@+id/refresh_btn"
+        android:gravity="center_horizontal">
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/loading_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/loading"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/text_relative_layout"
+        android:layout_alignTop="@+id/img_relative_layout"
+        android:layout_alignBottom="@+id/img_relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/refresh_btn"
+        android:layout_alignRight="@+id/refresh_btn"
+        android:layout_alignLeft="@+id/refresh_btn"
+        android:gravity="center_horizontal|center_vertical">
+        <TextView
+            android:id="@+id/tv_fetching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetching"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
